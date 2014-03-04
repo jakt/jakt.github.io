@@ -10,19 +10,6 @@ you find a section is lacking make some changes and submit a pull request.
 
 These things need to be completed before you come in on Day 1.
 
-### Paperwork.
-
-Paperwork generally sucks but it is important for the government and
-our lawyers / accountants. Some requisite documents:
-
- * Current, up-to-date NDA.
- * For 1099 employees, a valid contract.
- * For all paid employees, a complete W-9 form.
-
-You can find all these forms in the company dropbox under `Documents/Forms`.
-
-Speaking of Dropbox.
-
 ### Accounts Setup
 
 You will need an `@byjakt.com` Google Apps account. This encorporates your email

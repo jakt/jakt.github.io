@@ -108,7 +108,7 @@ The type of case. They are relatively self-explanatory.
 * **Inquiry** is for research or customer requests.
 * **Schedule Item** is for meetings or other misc. time spent on that project.
 
-#### Case Status & Kanban
+#### Case Status
 
 Each category has different statuses you can assign it. The three major statuses
 are:
@@ -122,6 +122,8 @@ deployment and closure.
 If you open a case for someone else to complete it is there responsibility to
 resolve it and assign it back to you. At that point it's your responsibility to
 verify that the case is complete and close it out.
+
+#### Kanban
 
 The kanban board is used to track the status of cases as they move through the
 system. Currently there are six columns:
@@ -143,9 +145,25 @@ tested move it to this column until the next release occurs.
 * **Shipped** Cases that are deployed or finalized are added here. When a case
 is moved to *Shipped* it should be closed.
 
-Currently we are experimenting with the kanban colors. Right now there is a
-color for each major project. There is an *Other* color (white) that is used if
-there is not a project color. In the future this might change.
+#### Kanban Colors
+
+We were experimenting with kanban colors previously using a color per-project.
+Now we're using colors to better indicate case status. Important colors are:
+
+ * **Blocked**: Means there will be no forward progress on a case until
+ something happens, either waiting for a reply, a bug is fixed, or something
+ else. *Blocked* cards should be given the highest priority because it means no
+ work will be done until the blocking issue is resolved.
+ * **Normal**: Means the case is progressing correctly within the set estimate
+ and due date. This should be the status for the majority of cases on the kanban
+ board.
+ * **Bug**: Is a special “Normal” status set aside for cases that are set in the
+ [*Bug* category](#category). Bugs should be fixed as soon as possible so they
+ are given a differentiating color.
+ * **Indeterminate (default)**: The fourth color is for cases that have not been
+ reviewed by the person they are assigned to. Please review cases that are
+ assigned to you sooner rather than later so that the estimates and due dates
+ are accurate.
 
 #### Assigned To
 
@@ -165,8 +183,11 @@ priority cases before lower priority cases.
 
 Milestones are used to track progress towards an finalized release. Typically
 this is a version number but other milestones are possible. There is a global
-milestone available to all projects called *Undecided*. If a project does not
-have a milestone configured it will be assigned to this milestone.
+milestone available to all projects called *Undecided*. There should also be a
+milestone called *General* that is available per-project. If the case does not
+apply to a current milestone in the project please attach it to the *General*
+milestone. If the case does not really apply to the project but you’re not sure
+where to put it, put it on the *Undecided* global milestone.
 
 #### Other Fields
 
@@ -206,7 +227,7 @@ A quick workflow for working on a particular feature or bug:
 1. Find the relevant case in FogBugz. If no case exists, [bug someone][josh@]
 about why a case doesn't exist.
 2. Ensure that the case estimate is correct and move the case to the *In
-Progress* [kanban column](#casestatuskanban).
+Progress* [kanban column](#kanban).
 3. Start time on the case, even if this isn't a client project and it's only
 internal.
 4. Open up your branch repository and consider creating a new branch for this

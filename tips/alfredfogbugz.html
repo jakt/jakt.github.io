@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DeveloperOnboarding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <h1 id="addingacustomsearchforfogbugztoalfred">Adding a custom search for FogBugz to Alfred</h1>
+
+    <figure>
+    <img src="../assets/images/fb_kiwi.png" alt="FogBugz Kiwi" />
+    <figcaption>FogBugz Kiwi</figcaption></figure>
+
+
+
+    <p>At JAKT we love using <a href="http://www.fogcreek.com/fogbugz/">FogBugz</a> by <a href="http://www.fogcreek.com/about/">FogCreek Software</a>, the
+    same team that brought <a href="https://trello.com">Trello</a> to life. Our every-day usage is
+    explained in more detail in our
+    <a href="../internal/onboarding.html#fogbugzkiln">onboarding documentation</a>.</p>
+
+    <figure>
+    <img src="../assets/images/alfred_logo.png" alt="Alfred" />
+    <figcaption>Alfred</figcaption></figure>
+
+
+
+    <p>We also highly recommend everyone use <a href="http://www.alfredapp.com">Alfred</a>, the <a href="http://qsapp.com">Quicksilver</a>
+    replacement for application launching and <a href="http://www.alfredapp.com/#features">so much more</a>.
+    Alfred has a configurable set of <a href="http://support.alfredapp.com/features:default-results">default searches</a> one can
+    configure. It also has powerful <a href="http://support.alfredapp.com/workflows/">workflows</a> but that&#8217;s for a
+    later time.</p>
+
+    <p>Setting up a default search for FogBugz is simple.</p>
+
+    <h3 id="step1:openalfredspreferences">Step #1: Open Alfred&#8217;s Preferences</h3>
+
+    <figure>
+    <img src="../assets/images/1.alfred_preferences.png" alt="Open Alfreds preferences" title="Open Alfred's preferences" />
+    <figcaption>Open Alfred&#8217;s preferences</figcaption></figure>
+
+
+
+    <p>You can open Alfred&#8217;s preferences by typing &#8220;alfred&#8221; into the query bar or by
+    hitting <code>Command+,</code> when the Alfred is toggled.</p>
+
+    <h3 id="step2:addingacustomwebsearch">Step #2: Adding A Custom Web Search</h3>
+
+    <figure>
+    <img src="../assets/images/2.alfred_features.png" alt="Click on the Features tab" title="Click on the &quot;Features&quot; tab" />
+    <figcaption>Click on the &#8220;Features&#8221; tab</figcaption></figure>
+
+
+
+    <p>Features are additional features for Alfred. Here you configure the default
+    fallback and web searches among other things.</p>
+
+    <figure>
+    <img src="../assets/images/3.alfred_web_search.png" alt="Go to the Web Search section" title="Go to the &quot;Web Search&quot; section" />
+    <figcaption>Go to the &#8220;Web Search&#8221; section</figcaption></figure>
+
+
+
+    <p>Before adding a default fallback you need to add it as a custom web search.</p>
+
+    <h3 id="step3:addingacustomsearch">Step #3: Adding A Custom Search</h3>
+
+    <figure>
+    <img src="../assets/images/4.alfred_custom_search.png" alt="Click Add Custom Search in the lower right corner" title="Click &quot;Add Custom Search&quot; in the lower right corner" />
+    <figcaption>Click &#8220;Add Custom Search&#8221; in the lower right corner</figcaption></figure>
+
+
+
+    <p>Click &#8220;Add Custom Search&#8221; to open the dialog for adding a new custom search to
+    Alfred.</p>
+
+    <figure>
+    <img src="../assets/images/5.alfred_fogbugz_search.png" alt="Fill in details for FogBugz replacing YOURDOMAIN with your server address or FogBugz On-Demand address" title="Fill in details for FogBugz replacing YOURDOMAIN with your server address or FogBugz On-Demand address" />
+    <figcaption>Fill in details for FogBugz replacing YOURDOMAIN with your server address or FogBugz On-Demand address</figcaption></figure>
+
+
+
+    <p>I grabbed the FogBugz icon from the FogBugz website. Looks better that way. The
+    query url should look like:</p>
+
+    <pre><code>https://YOURDOMAIN/f/search/?sSearchFor={query}
+    </code></pre>
+
+    <p>For FogBugz On-Demand. If you&#8217;re using <a href="http://www.fogcreek.com/fogbugz/for-your-server.html">FogBugz for Your Server</a>
+    the url might be different. The important thing here is the <code>{query}</code> argument
+    that pipes whatever you type into Alfred into the search string.</p>
+
+    <h3 id="step4:addingafallbacksearch">Step #4: Adding A Fallback Search</h3>
+
+    <figure>
+    <img src="../assets/images/6.alfred_default_results.png" alt="Click on the Default Results tab" title="Click on the &quot;Default Results&quot; tab" />
+    <figcaption>Click on the &#8220;Default Results&#8221; tab</figcaption></figure>
+
+
+
+    <p>Open up the &#8220;Default Results&#8221; tab. This is for configuring a lot of Alfred&#8217;s
+    default actions and behavior.</p>
+
+    <figure>
+    <img src="../assets/images/7.alfred_fallback_results.png" alt="Click the Setup fallback results button on the lower left of the panel" title="Click the &quot;Setup fallback results&quot; button on the lower left of the panel" />
+    <figcaption>Click the &#8220;Setup fallback results&#8221; button on the lower left of the panel</figcaption></figure>
+
+
+
+    <p>Fallback results are default searches Alfred can perform if no keyword or action
+    is being triggered.</p>
+
+    <figure>
+    <img src="../assets/images/8.alfred_add_fogbugz.png" alt="Click the + button, then Custom Search, then Search FogBugz" title="Click the &quot;+&quot; button, then &quot;Custom Search&quot;, then &quot;Search FogBugz&quot;" />
+    <figcaption>Click the &#8220;+&#8221; button, then &#8220;Custom Search&#8221;, then &#8220;Search FogBugz&#8221;</figcaption></figure>
+
+
+
+    <p>Add FogBugz as a fallback option here. I&#8217;ve removed Amazon and Wikipedia and
+    left only Google and Fogbugz.</p>
+
+    <h3 id="step5:tryitout">Step #5: Try It Out</h3>
+
+    <figure>
+    <img src="../assets/images/9.alfred_fogbugz_test.png" alt="Try out a new search" title="Try out a new search" />
+    <figcaption>Try out a new search</figcaption></figure>
+
+
+
+    <p>Type something in and give it a shot. It will use <a href="https://help.fogcreek.com/7480/search-syntax-and-the-search-axis">FogBugz&#8217;s search axis query</a> so becoming familiar with that will help.</p>
+</body>
+</html>

@@ -87,26 +87,55 @@ guidelines for how we use it but one of the best resources for you to go over is
 the FogBugz help desk, especially the
 [FogBugz in Two Minutes][fogbugz two minutes] video.
 
-#### Projects
+### Projects
 
 We create one project per client. All cases for a project go within here.
 
-#### Areas
+##### Inbox Project
+
+FogBugz has great email integration. That integration is placed in a special
+project called “Inbox”. Due to limitations on mailboxes all incoming email is
+funneled into the Inbox project where it is separated out by Areas. There is one
+area per-project. If you have access to the Inbox project you might be tasked
+with handling incoming email. In the case that an incoming email results in
+work that needs to be done create a new case in the appropriate project for that
+work setting the Parent Case to the case number assigned to the email.
+
+Email handling is traditionally kept off the Kanban column.
+
+### Area
 
 Areas within a project are used to separate logical types of work. For starters
 each project will have an area called “Misc.” As the project grows we will
-expand the number of areas slowly to accommodate certain filters or grouping of
-cases.
+expand the number of areas slowly to accommodate certain grouping of cases. One
+expansion of this is when we work on a project with other teams. In this case
+the “Misc.” area will become “JAKT” and a new area per-team will be created.
 
-#### Category
+### Milestone
 
-The type of case. They are relatively self-explanatory.
+For starters each project will have a “General” milestone. There is also a
+global milestone called “Undecided.”
+
+Milestones are used as general per-contract feature sets. This helps build in
+estimation and predict general due dates. Normally milestones run concurrently.
+In the case of mobile projects milestones are versioned and used to separate out
+various releases that are sent during development. Even numbered versions are
+public or client-facing. Use odd numbered versions for internal use.
+
+### Category
+
+The type of case. They are relatively self-explanatory. They are used in
+conjunction with the resolving status and project to define the workflow that a
+case should take. For example, Tasks are typically centered around things that
+don't need to be double checked. Tasks when resolved are assigned to the person
+who opened the case. Features on the other hand need testing, this means
+resolving a feature assigns it to the Test Lieutenant virtual user.
 
 * **Bug** is for bugs.
 * **Feature** is for improvements or additions.
 * **Task** is for things that are not features or bugs (use sparingly).
-* **Inquiry** is for research or customer requests.
-* **Schedule Item** is for meetings or other misc. time spent on that project.
+* **Inquiry** is for requests or other information.
+* **Schedule Item** is for meetings.
 
 #### Case Status
 
@@ -115,11 +144,9 @@ are:
 
 * **Active** Case is active.
 * **Resolved** Case is considered complete by the person who resolved it.
-* **Closed** Case is closed out, deployed, and confirmed. Typically you will not
-be closing cases, only resolving and assigning them to your team lead for
-deployment and closure.
+* **Closed** Case is closed out, deployed, and confirmed.
 
-If you open a case for someone else to complete it is there responsibility to
+If you open a case for someone else to complete it is their responsibility to
 resolve it and assign it back to you. At that point it's your responsibility to
 verify that the case is complete and close it out.
 
